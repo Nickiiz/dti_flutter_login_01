@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:dti_flutter_login_01/views/register_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -56,7 +57,7 @@ class _LoginAUIState extends State<LoginAUI> {
                   bottom: MediaQuery.of(context).size.width * 0.1,
                 ),
                 child: Text(
-                  'Welcome back, "Wirapat"',
+                  'Welcome back, "Panuwat"',
                   style: GoogleFonts.itim(
                     fontSize: MediaQuery.of(context).size.width * 0.04,
                     color: Color.fromARGB(255, 110, 100, 100),
@@ -198,9 +199,16 @@ class _LoginAUIState extends State<LoginAUI> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RegisterUI(),
+                        ),
+                      );
+                    },
                     child: Text(
-                      'Sign Up',
+                      'Register',
                       style: GoogleFonts.itim(
                         color: Colors.black,
                         fontSize: MediaQuery.of(context).size.width * 0.03,
