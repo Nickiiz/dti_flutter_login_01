@@ -1,17 +1,17 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LoginBUI extends StatefulWidget {
-  const LoginBUI({super.key});
+class LoginCUI extends StatefulWidget {
+  const LoginCUI({super.key});
 
   @override
-  State<LoginBUI> createState() => _LoginBUIState();
+  State<LoginCUI> createState() => _LoginCUIState();
 }
 
-class _LoginBUIState extends State<LoginBUI> {
+class _LoginCUIState extends State<LoginCUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,31 +26,47 @@ class _LoginBUIState extends State<LoginBUI> {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  right: MediaQuery.of(context).size.width * 0.7,
+                  right: MediaQuery.of(context).size.width * 0.5,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text(
+                      'Login Account',
+                      style: GoogleFonts.kanit(
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
+                        color: Colors.black,
+                      ),
+                    ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.015,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.user,
+                      size: MediaQuery.of(context).size.width * 0.055,
                     ),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  right: MediaQuery.of(context).size.width * 0.1,
-                  left: MediaQuery.of(context).size.width * 0.05,
+                  right: MediaQuery.of(context).size.width * 0.45,
+                  left: MediaQuery.of(context).size.width * 0.002,
                   top: MediaQuery.of(context).size.width * 0.01,
                   bottom: MediaQuery.of(context).size.width * 0.1,
                 ),
                 child: Text(
-                  'Welcome back! Glad to see you, Again!',
+                  'Welcome back, Wirapat !',
                   style: GoogleFonts.kanit(
-                    fontSize: MediaQuery.of(context).size.width * 0.09,
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
+              ),
+              Image.asset(
+                'assets/images/02.png',
+                height: MediaQuery.of(context).size.width * 0.35,
+                width: MediaQuery.of(context).size.height * 0.35,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.width * 0.04,
@@ -64,24 +80,27 @@ class _LoginBUIState extends State<LoginBUI> {
                 child: TextField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                    hintText: 'Enter your email',
+                    hintText: "Enter email i'd",
                     hintStyle: GoogleFonts.kanit(
                       color: Colors.grey[600],
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         color: Colors.black,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         color: Colors.grey,
                       ),
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.000005,
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -92,18 +111,18 @@ class _LoginBUIState extends State<LoginBUI> {
                 child: TextField(
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
-                    hintText: 'Enter you password',
+                    hintText: 'Enter password',
                     hintStyle: GoogleFonts.kanit(
                       color: Colors.grey[600],
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         color: Colors.black,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(
                         color: Colors.grey,
                       ),
@@ -113,8 +132,8 @@ class _LoginBUIState extends State<LoginBUI> {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  right: MediaQuery.of(context).size.width * 0.129,
-                  top: MediaQuery.of(context).size.width * 0.01,
+                  right: MediaQuery.of(context).size.width * 0.09,
+                  top: MediaQuery.of(context).size.width * 0.0005,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -122,8 +141,8 @@ class _LoginBUIState extends State<LoginBUI> {
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Forgot Password ?',
-                        style: GoogleFonts.kanit(
+                        'Forget Password?',
+                        style: GoogleFonts.itim(
                             color: const Color.fromARGB(255, 0, 0, 0),
                             fontSize: MediaQuery.of(context).size.width * 0.04),
                       ),
@@ -132,7 +151,7 @@ class _LoginBUIState extends State<LoginBUI> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.width * 0.055,
+                height: MediaQuery.of(context).size.width * 0.005,
               ),
               ElevatedButton(
                 onPressed: () {},
@@ -140,10 +159,11 @@ class _LoginBUIState extends State<LoginBUI> {
                   'Login',
                   style: GoogleFonts.kanit(
                     fontSize: MediaQuery.of(context).size.width * 0.04,
+                    color: Colors.black,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                  backgroundColor: Color.fromARGB(255, 255, 197, 4),
                   fixedSize: Size(
                     MediaQuery.of(context).size.width * 0.8,
                     MediaQuery.of(context).size.height * 0.06,
@@ -157,9 +177,9 @@ class _LoginBUIState extends State<LoginBUI> {
                 height: MediaQuery.of(context).size.width * 0.055,
               ),
               Text(
-                '----------------- Or Login with -----------------',
+                '------------- Or sign up with -------------',
                 style: GoogleFonts.kanit(
-                  fontSize: MediaQuery.of(context).size.width * 0.035,
+                  fontSize: MediaQuery.of(context).size.width * 0.03,
                   color: Colors.grey[600],
                 ),
               ),
@@ -181,8 +201,8 @@ class _LoginBUIState extends State<LoginBUI> {
                           ),
                         ),
                         icon: Icon(
-                          FontAwesomeIcons.facebookF,
-                          color: Color.fromARGB(255, 0, 30, 255),
+                          FontAwesomeIcons.google,
+                          color: Color.fromARGB(255, 255, 0, 0),
                         ),
                         style: ElevatedButton.styleFrom(
                           fixedSize: Size(
@@ -208,8 +228,8 @@ class _LoginBUIState extends State<LoginBUI> {
                         ),
                       ),
                       icon: Icon(
-                        FontAwesomeIcons.google,
-                        color: Color.fromARGB(255, 255, 0, 0),
+                        FontAwesomeIcons.facebook,
+                        color: Color.fromARGB(255, 43, 0, 255),
                       ),
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(
@@ -257,18 +277,18 @@ class _LoginBUIState extends State<LoginBUI> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    ' Dont have an account?',
+                    'Not register yet ?',
                     style: GoogleFonts.kanit(
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Colors.grey[600],
                       fontSize: MediaQuery.of(context).size.width * 0.035,
                     ),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Register Now',
-                      style: GoogleFonts.itim(
-                        color: Color.fromARGB(255, 0, 255, 247),
+                      'Create Accout',
+                      style: GoogleFonts.kanit(
+                        color: Colors.black,
                         fontSize: MediaQuery.of(context).size.width * 0.03,
                       ),
                     ),
